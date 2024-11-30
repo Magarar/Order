@@ -1,10 +1,117 @@
-/**index.wxss**/
-page {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* 搜索 */
+.search-warp{
+  padding: 0 20rpx 20rpx 20rpx;
+  background-color: #FF6146;
 }
-.scrollarea {
-  flex: 1;
-  overflow-y: hidden;
+
+.search-box{
+  display: flex;
+  flex-direction: row;
+  border: 1rpx solid #f7f7f7;
+  /* margin: 0 20rpx; */
+  padding: 0rpx 20rpx;
+  /* border-radius: 20rpx; */
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+
+.search-image{
+  width: 50rpx;
+  height: 50rpx;
+  background-color: white;
+}
+
+.search-input{
+  padding: 20rpx 20rpx;
+  width: 500rpx;
+  background-color: white;
+}
+
+/* 轮播 */
+.swiper-box{
+  padding: 20rpx 20rpx;
+}
+
+.swiper-drag{
+  height: 300rpx; 
+}
+
+.swiper-image{
+  width: 100%;
+  height: 100%;
+  border: 20rpx;
+}
+
+/* 分类 */
+/* 确保外部容器有固定的宽度和高度，并设置 overflow 属性为 auto 以启用滚动 */
+.type-box {
+  display: flex;
+  flex-wrap: nowrap; /* 防止子元素换行 */
+  overflow-x: auto;  /* 启用水平滚动 */
+  -webkit-overflow-scrolling: touch; /* 在移动设备上启用流畅滚动 */
+  padding: 10px; /* 可选：添加一些内边距 */
+  box-sizing: border-box; /* 确保内边距不会增加容器的总宽度 */
+}
+ 
+/* 为每个类型项设置样式 */
+.type-item {
+  display: flex;
+  flex-direction: column; /* 垂直排列子元素 */
+  align-items: center; /* 水平居中 */
+  justify-content: center; /* 垂直居中（如果需要） */
+  width: 25%; /* 每个项目占据容器宽度的 25%，因此最多可以显示 4 个 */
+  box-sizing: border-box; /* 确保边框和内边距不会增加项目的总宽度 */
+  margin: 5px; /* 可选：添加一些外边距以增加间距 */
+  padding: 10px; /* 可选：添加一些内边距以增加内部间距 */
+  background-color: #fff; /* 可选：设置背景颜色 */
+  border-radius: 5px; /* 可选：添加圆角 */
+}
+ 
+/* 设置图片和文本的样式 */
+.type-image {
+  width: 32px; /* 设置图片宽度为32px */
+  height: 32px; /* 设置图片高度为32px */
+  object-fit: cover; /* 图片保持比例填充容器，可能会裁剪 */
+  border-radius: 4px; /* 可选：为图片添加圆角，与.type-item的圆角相匹配但稍小 */
+}
+ 
+.type-text{
+  font-size: 10px;
+  align-items: center;
+}
+
+
+.goods-box{
+  display: flex;
+  flex-direction: row;
+  padding: 0 20rpx;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+
+}
+
+.goods-image{
+  width: 345rpx;
+  height: 400rpx;
+  border-radius: 20rpx;
+}
+
+.goods-bootom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.goods-title{
+  align-items: flex-start;
+  font-size: 32rpx;
+  margin:10rpx 0rpx;
+}
+
+.goods-recommend{
+  color: rgb(175,175,175);
 }

@@ -1,0 +1,27 @@
+<image src="{{goods.cover}}" class="goods-cover"></image>
+
+<view class="goods-tag">
+  <view class="goods-recommend">推荐度:{{goods.recommend}}</view>
+  <view class="goods-price">￥{{goods.price}}</view>
+</view>
+
+<view class="goods-title-box">
+  <view class="goods-title">{{goods.title}}</view>
+  </view>
+
+<view class="goods-secondTitle">商品详情</view>
+
+<view class="goods-content-box">{{goods.content}}</view>
+
+<view style="height:120rpx;"></view>
+
+<view class="tabber">
+  <view class="cart_number">{{cartList.length}}</view>
+  <view>
+    <image src="/images/guidance/cart_selected.png" class="tabber-image">
+    </image>
+  </view>
+  <view class="tabber-right">
+    <view class="add-cart" bind:tap="addCart">加入购物车</view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+/* pages/index/GoodsDetail/GoodsDetail.wxss */
+.title{
+  font-weight: 550;
+  text-align: center;
+  margin: 20rpx 0;
+  font-size: 40;
+}
+
+.rich{
+  text-align: center;
+  margin: 0 20rpx;
+}

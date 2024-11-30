@@ -1,0 +1,18 @@
+<!--pages/cart/cart.wxml-->
+<block wx:for="{{cartList}}">
+  <view class="cart-box">
+    <image src="/images/guidance/choose.png" class="choose-img">  </image>
+    <image src="{{item.cover}}" class="good-img">  </image>
+    <view class="good-right">
+      <view>{{item.title}}</view>
+      <view class="good-right-bottom">
+        <view>¥{{item.price}}</view>
+        <view class="good-right-bottom">
+          <image src="/images/guidance/minus.png" class="add-delete-img"></image>
+          <view class = "cart-good-num">0</view>
+          <image src="/images/guidance/plus.png" class="add-delete-img"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>

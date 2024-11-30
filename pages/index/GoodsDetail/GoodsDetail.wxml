@@ -1,0 +1,8 @@
+<!--pages/index/GoodsDetail/GoodsDetail.wxml-->
+<view class="title">
+  {{goods.title}}
+</view>
+
+<view class="rich">
+<rich-text nodes="{{goods.content}}"></rich-text>
+</view>

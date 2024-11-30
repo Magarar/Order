@@ -1,2 +1,43 @@
 <!--index.wxml-->
-<view>你好</view>
+
+<view class="search-warp">
+  <view class="search-box">
+  <input type="text" placeholder="请输入菜品关键词" class="search-input"/>
+  <image src="/images/guidance/search.png" class="search-image"></image>
+  </view>
+</view>
+
+<view class="swiper-box">
+  <swiper class="swiper-drag" indicator-dots="true"     indicator-color="#FFFFFF" autoplay="true">
+    <block wx:for="{{swiperList}}">
+      <swiper-item bind:tap="toGoodsDetails" data-id="{{item._id}}">
+        <image class="swiper-image" src="{{item.swiperImage}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="type-box">
+  <block wx:for="{{typeList}}">
+    <view class="type-item" bind:tap="">
+      <image src="{{item.image}}" class="type-image"></image>
+    <view class="type-text">{{item.title}}</view>
+    </view>
+  </block>
+</view>
+
+<view class="goods-box">
+
+  <block wx:for="{{goodsListPre}}">
+  <view bind:tap="toGood" data-id="{{item._id}}">
+    <image src="{{item.cover}}" class="goods-image"></image>
+    <view class="goods-title">{{item.title}}</view>
+    <view class="goods-bootom">
+      <view class="goods-recommend">推荐度:<span style="color: red;">{{item.recommend}}</span></view>
+      <view>价格:<span style="color: red;">{{item.price}}</span></view>
+    </view>
+  </view>
+</block>
+</view>
+
+<view style="height:100rpx;"></view>

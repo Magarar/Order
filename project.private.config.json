@@ -3,5 +3,32 @@
   "projectname": "miniprogram-3",
   "setting": {
     "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/cart/cart",
+          "pathName": "pages/cart/cart",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/type/type",
+          "pathName": "pages/type/type",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/Goods/Goods",
+          "pathName": "pages/Goods/Goods",
+          "query": "id=59af7b52674aa9f2010603f70c320f27",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
   }
 }

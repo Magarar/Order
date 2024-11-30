@@ -1,0 +1,79 @@
+.cart-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff; /* 背景色设置为白色 */
+  margin-bottom: 10px; /* 每个购物车项之间有一定的间距 */
+  border-bottom: 1px solid #eee; /* 添加下边框以分隔项 */
+}
+ 
+/* 选择框图片 */
+.choose-img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px; /* 与右侧内容保持间距 */
+}
+ 
+/* 商品图片 */
+.good-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover; /* 保持图片宽高比 */
+  margin-right: 10px; /* 与右侧内容保持间距 */
+}
+ 
+/* 商品信息容器 */
+.good-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1; /* 占据剩余空间 */
+}
+ 
+/* 商品标题 */
+.good-right > view:first-of-type {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px; /* 与下方内容保持间距 */
+}
+ 
+/* 价格和数量容器（需要调整结构） */
+.good-right-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto; /* 使价格和数量容器贴近底部 */
+}
+ 
+/* 价格 */
+.good-right-bottom > view:first-of-type {
+  font-size: 14px;
+  color: #e4393c; /* 设置为红色或淘宝购物车中使用的颜色 */
+}
+ 
+/* 数量容器（需要新增一个容器来包裹加减按钮和数量） */
+.cart-good-num-container {
+  display: flex;
+  align-items: center;
+}
+ 
+/* 加减按钮 */
+.add-delete-img {
+  width: 20px;
+  height: 20px;
+  margin: 0 2px; /* 与数量保持间距 */
+  cursor: pointer; /* 添加鼠标悬停效果（虽然在小程序中不常用，但可用于调试） */
+}
+ 
+/* 商品数量 */
+.cart-good-num {
+  width: 30px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #ddd; /* 添加边框 */
+  border-radius: 4px; /* 圆角 */
+  margin: 0 4px; /* 与加减按钮保持间距 */
+}
