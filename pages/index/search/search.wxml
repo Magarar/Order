@@ -1,0 +1,19 @@
+<view class="search-warp">
+  <view class="search-box">
+  <input type="text" bindinput="getValue" placeholder="请输入菜品关键词" class="search-input"/>
+  <image src="/images/guidance/search.png" class="search-image" bind:tap="search"></image>
+  </view>
+</view>
+
+<block wx:for="{{goodsList}}">
+  <view class="good-box" bind:tap="toGood" data-id="{{item._id}}">
+    <image src="{{item.cover}}" class="good-img"></image>
+    <view class="right-box">
+      <view>{{item.title}}</view>
+      <view class="right-bottom-box">
+        <view class="right-bottom-recommend">推荐度:{{item.recommend}}</view>
+        <view class="right-bottom-price">¥{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+</block>

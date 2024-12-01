@@ -1,0 +1,41 @@
+<view class="page-content">
+    <block wx:for="{{cartList}}">
+    <view class="cart-box">
+      <image src="{{item.cover}}" class="good-img">  </image>
+      <view class="good-right">
+        <view>{{item.title}}</view>
+        <view class="good-right-bottom">
+          <view>¥{{item.price}}</view>
+          <view class="good-right-bottom">
+            <image src="/images/guidance/minus.png" class="add-delete-img" bindtap="decreaseNum" data-index="{{index}}"></image>
+            <view class = "cart-good-num">{{item.num}}</view>
+            <image src="/images/guidance/plus.png" class="add-delete-img" bindtap="increaseNum" data-index="{{index}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <picker mode="selector" range="{{tableList}}" value="{{selectedTable}}" bindchange="onTableChange">
+    <view class="table-selection-box">
+      <view class="picker">
+        <view style="flex: 1;">选择餐桌:</view>
+        <view style="flex: 1; margin-left: auto;">{{selectedTableName || '请选择'}}</view>
+      </view>
+    </view>
+  </picker> 
+
+  <view class="remark-input-box">
+    <input type="text" placeholder="请输入备注" bindinput="onRemarkInput" value="{{remark}}"/>
+  </view>
+</view>
+
+<view class="all-bottom-box">
+  <view class="all-bottom-left">
+    <view class="add-bottom-left-text">合计</view>
+  </view>
+  <view class="all-bottom-right">
+    <view class="total-price">¥{{totalPrice}}</view>
+    <view class="total-button" bind:tap="addOrder">确认结算</view>
+  </view>
+</view>

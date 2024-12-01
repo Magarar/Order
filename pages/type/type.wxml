@@ -8,16 +8,14 @@
 
   <scroll-view scroll-y="true">
     <block wx:for="{{goodsList}}">
-      <view class="type-good-box" bind:tap="toGood" data-id="{{item._id}}">
-        <image src="{{item.cover}}" class="type-good-image"></image>
+      <view class="type-good-box" >
+        <image src="{{item.cover}}" class="type-good-image" bind:tap="toGood" data-id="{{item._id}}"></image>
         <view class="type-good-right">
           <view class="type-good-title">{{item.title}}</view>
           <view class="type-goods-recommend">推荐度:{{item.recommend}}</view>
           <view class="bottom-box">
             <view class="type-good-price">¥{{item.price}}</view>
-            <view class="choose-number-box">
-              <!-- <image src="/images/guidance/minus.png"></image> -->
-              <!-- <view class="type-good-number">10</view> -->
+            <view class="choose-number-box" bind:tap="addCart" data-id="{{item._id}}">
               <image src="/images/guidance/plus.png"></image>
             </view>
           </view>

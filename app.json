@@ -6,7 +6,10 @@
     "pages/me/me",
     "pages/index/GoodsDetail/GoodsDetail",
     "pages/index/typeDetail/typeDetail",
-    "pages/Goods/Goods"
+    "pages/Goods/Goods",
+    "pages/index/search/search",
+    "pages/order/order",
+    "cloud/getOpenID"
   ],
   "window": {
     "navigationBarTextStyle": "white",

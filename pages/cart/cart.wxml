@@ -1,18 +1,31 @@
 <!--pages/cart/cart.wxml-->
 <block wx:for="{{cartList}}">
   <view class="cart-box">
-    <image src="/images/guidance/choose.png" class="choose-img">  </image>
-    <image src="{{item.cover}}" class="good-img">  </image>
+    <image wx:if="{{item.choose==true}}" src="/images/guidance/choose.png" class="choose-img" bind:tap="chooseGood" data-index="{{index}}">  </image>
+    <image wx:if="{{item.choose==false}}" src="/images/guidance/unChoose.png" class="choose-img"
+    bind:tap="chooseGood" data-index="{{index}}">  </image>
+    <image src="{{item.cover}}" class="good-img" bind:tap="toGood" data-id="{{item._id}}">  </image>
     <view class="good-right">
       <view>{{item.title}}</view>
       <view class="good-right-bottom">
         <view>¥{{item.price}}</view>
         <view class="good-right-bottom">
-          <image src="/images/guidance/minus.png" class="add-delete-img"></image>
-          <view class = "cart-good-num">0</view>
-          <image src="/images/guidance/plus.png" class="add-delete-img"></image>
+          <image src="/images/guidance/minus.png" class="add-delete-img" bindtap="decreaseNum" data-index="{{index}}"></image>
+          <view class = "cart-good-num">{{item.num}}</view>
+          <image src="/images/guidance/plus.png" class="add-delete-img" bindtap="increaseNum" data-index="{{index}}"></image>
         </view>
       </view>
     </view>
   </view>
 </block>
+
+<view class="all-bottom-box">
+  <view class="all-bottom-left" bind:tap="chooseAll">
+    <image src="/images/guidance/Choose.png" class="all-choose-img"></image>
+    <view class="add-bottom-left-text">全选</view>
+  </view>
+  <view class="all-bottom-right">
+    <view class="total-price">¥{{totalPrice}}</view>
+    <view class="total-button" bind:tap="toOrder">确认结算</view>
+  </view>
+</view>

@@ -1,4 +1,5 @@
 // pages/type/type.js
+const app=getApp();
 Page({
 
   /**
@@ -73,6 +74,15 @@ Page({
     let id = event.currentTarget.dataset.id;
     wx.navigateTo({
       url: '/pages/Goods/Goods?id='+id,
+    })
+  },
+
+  addCart(event) {
+    let id = event.currentTarget.dataset.id;
+    console.log(id);
+    wx.cloud.database().collection("goods").doc(id).get()
+    .then(res=>{
+      app.addToCart(res.data);
     })
   }
 

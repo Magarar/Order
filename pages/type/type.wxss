@@ -43,6 +43,7 @@
   object-fit: cover; /* 图片保持比例填充容器，可能会裁剪 */
   border-radius: 4px; /* 可选：为图片添加圆角，与.type-item的圆角相匹配但稍小 */
   margin-right: 20rpx;
+  margin-top: 20rpx;
 }
 
 .choose-number-box{
@@ -83,7 +84,8 @@
 }
 
 .type-good-title{
-  font-size: 33rpx;
+  margin-top: 20rpx;
+  font-size: 30rpx;
   margin-bottom: 3px;
 }
 

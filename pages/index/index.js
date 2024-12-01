@@ -1,4 +1,5 @@
 // index.js
+const app = getApp();
 Page({
 
   /**
@@ -72,6 +73,19 @@ Page({
       url: '/pages/Goods/Goods?id='+id,
     });
   },
+
+  turnToType(){
+    wx.showToast({
+      title:"还没写!"
+    })
+  },
+
+  toSearch(){
+    wx.navigateTo({
+      url: '/pages/index/search/search',
+    })
+  }
+
 
 
 })

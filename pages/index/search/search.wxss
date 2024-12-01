@@ -1,0 +1,88 @@
+.search-warp{
+  padding: 0 20rpx 20rpx 20rpx;
+  background-color: #FF6146;
+}
+
+.search-box{
+  display: flex;
+  flex-direction: row;
+  border: 1rpx solid #f7f7f7;
+  /* margin: 0 20rpx; */
+  padding: 0rpx 20rpx;
+  /* border-radius: 20rpx; */
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+
+.search-image{
+  width: 50rpx;
+  height: 50rpx;
+  background-color: white;
+}
+
+.search-input{
+  padding: 20rpx 20rpx;
+  width: 500rpx;
+  background-color: white;
+}
+
+/* 商品列表容器样式 */
+.good-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+ 
+/* 商品图片样式 */
+.good-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+ 
+/* 商品信息容器样式 */
+.right-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+ 
+/* 商品标题样式 */
+.right-box > view:nth-child(1) {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+ 
+/* 商品推荐和价格容器样式 */
+.right-bottom-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+ 
+/* 商品推荐样式 */
+.right-bottom-recommend {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 5px;
+}
+ 
+/* 商品价格样式 */
+.right-bottom-price {
+  font-size: 16px;
+  color: #f56c6c;
+  font-weight: bold;
+}

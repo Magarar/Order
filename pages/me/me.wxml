@@ -1,2 +1,9 @@
-<!--pages/me/me.wxml-->
-<text>pages/me/me.wxml</text>
+<view class="my-page-container">
+  <image src="/images/user.png" class="face-img"></image>
+  <view class="meau-item">登录</view>
+
+  <view class="meau-item" bind:tap="goToMyOrders">我的订单</view>
+  <view class="meau-item">联系客服</view>
+  <view class="meau-item">意见反馈</view>
+  <view class="meau-item" bind:tap="logout">退出</view>
+</view>

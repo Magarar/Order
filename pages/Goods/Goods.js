@@ -7,7 +7,8 @@ Page({
    */
   data: {
     goods:{},
-    cartList:app.globalData.cartList
+    cartList:app.globalData.cartList,
+    cartListLength:0
   },
   
   onLoad(options) {
@@ -18,17 +19,20 @@ Page({
       })
     });
     this.setData({
-      cartList:app.globalData.cartList
-    })
+      cartList:app.globalData.cartList,
+      cartListLength:app.getTotalQuantity()
+    });
+
 
   },
 
   addCart(){
-    app.globalData.cartList.push(this.data.goods);
+    app.addToCart(this.data.goods);
     this.setData({
-      cartList:app.globalData.cartList
-    })
-  }
+      cartList:app.globalData.cartList,
+      cartListLength:app.getTotalQuantity()
+    });
+  },
 
 
 })

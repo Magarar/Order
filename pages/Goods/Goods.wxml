@@ -16,7 +16,7 @@
 <view style="height:120rpx;"></view>
 
 <view class="tabber">
-  <view class="cart_number">{{cartList.length}}</view>
+  <view class="cart_number">{{cartListLength}}</view>
   <view>
     <image src="/images/guidance/cart_selected.png" class="tabber-image">
     </image>

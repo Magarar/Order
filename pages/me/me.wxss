@@ -1,1 +1,54 @@
-/* pages/me/me.wxss */
+/* 用户头像样式 */
+.face-img {
+  width: 60px; /* 头像宽度 */
+  height: 60px; /* 头像高度 */
+  border-radius: 50%; /* 圆形头像 */
+  object-fit: cover; /* 保证图片覆盖整个容器，同时保持宽高比 */
+  margin: 20px auto; /* 外边距，自动 margin 用于水平居中 */
+  display: block; /* 将图片转换为块级元素，以便 margin 可以水平居中 */
+}
+
+/* 菜单项样式 */
+.meau-item {
+  padding: 10px 15px; /* 内边距 */
+  border-bottom: 1px solid #eee; /* 底部边框，分隔菜单项 */
+  font-size: 16px; /* 字体大小 */
+  color: #333; /* 字体颜色 */
+  text-align: center; /* 文字居中 */
+  position: relative; /* 相对定位，用于清除浮动 */
+}
+
+/* 菜单项点击效果 */
+.meau-item:last-child {
+  border-bottom: none; /* 最后一个菜单项没有底部边框 */
+}
+
+.meau-item:active {
+  background-color: #f2f2f2; /* 点击时的背景色 */
+}
+
+/* 菜单项箭头样式 */
+.meau-item::after {
+  content: '>';
+  font-size: 12px;
+  color: #888;
+  position: absolute;
+  right: 15px; /* 根据实际布局调整 */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 退出按钮特殊样式 */
+.meau-item:last-child {
+  color: red; /* 退出按钮颜色 */
+}
+
+/* 我的页面容器样式 */
+.my-page-container {
+  background-color: #fff; /* 背景色 */
+}
+
+/* 登录按钮特殊样式 */
+.meau-item:first-child {
+  color: #1aad19; /* 登录按钮颜色 */
+}
