@@ -7,6 +7,7 @@ App({
     if(wx.getStorageSync("cartList")){
       this.globalData.cartList=wx.getStorageSync("cartList")
     };
+    
     wx.cloud.callFunction({
       name:"getOpenID"
     }).then(res=>{

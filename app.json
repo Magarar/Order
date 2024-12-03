@@ -9,7 +9,9 @@
     "pages/Goods/Goods",
     "pages/index/search/search",
     "pages/order/order",
-    "cloud/getOpenID"
+    "cloud/getOpenID",
+    "pages/myOrder/myOrder",
+    "pages/DetailOrder/DetailOrder"
   ],
   "window": {
     "navigationBarTextStyle": "white",

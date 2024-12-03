@@ -1,0 +1,110 @@
+.container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+ 
+/* 订单头部样式 */
+.order-header {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+}
+ 
+.order-header text {
+  display: block;
+  margin-bottom: 10px;
+}
+ 
+/* 订单项目列表样式 */
+.order-items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+}
+ 
+/* 订单项目样式 */
+.order-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+ 
+/* 商品图片样式 */
+.item-image {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+ 
+/* 商品标题样式 */
+.item-title {
+  font-size: 16px;
+  color: #333;
+  flex: 1;
+}
+ 
+/* 商品价格样式 */
+.item-price {
+  font-size: 14px;
+  color: #f56c6c;
+  margin-top: 5px;
+}
+ 
+/* 商品数量样式 */
+.item-num {
+  font-size: 14px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.item-text{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.feedback-container {
+  height: 200px; /* 设置一个固定的高度，根据需要调整 */
+  margin-top: 20px; /* 与上面的内容保持一定的间距 */
+  background-color: #ffffff; /* 可选：设置背景色以区分其他内容 */
+  border-top: 1px solid #e0e0e0; /* 可选：添加一条分隔线 */
+  padding: 10px; /* 可选：为内部内容提供内边距 */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* 可选：添加阴影以增强层次感 */
+}
+ 
+/* 反馈输入框样式 */
+.feedback-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+ 
+/* 反馈按钮样式 */
+.feedback-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #ff4400;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+}
+ 
+/* 按钮悬停或点击效果（可选） */
+.feedback-button:active {
+  background-color: #e63900; /* 稍微暗一点的颜色表示点击效果 */
+}

@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="order-header">
+    <text>订单标题: {{orderList.title}}</text>
+    <text>订单日期: {{orderList.Date}}</text>
+    <text>订单总价: {{orderList.price}}元</text>
+    <text>餐桌:{{orderList.table+1}}号</text>
+    <text>订单状态:{{orderList.status}}</text>
+  </view>
+  
+  <view class="order-items">
+    <block wx:for="{{orderList.order}}" wx:key="*this">
+      <view class="order-item">
+        <image class="item-image" src="{{item.cover}}" mode="aspectFit"></image>
+        <view class="item-text">
+          <text class="item-title">{{item.title}}</text>
+          <text class="item-price">价格: {{item.price}} 元</text>
+          <text class="item-num">数量: {{item.num}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<scroll-view class="feedback-scroll-container" scroll-y="true" wx:if="{{orderList.status === 2}}">
+  <view class="feedback-container">
+    <textarea class="feedback-input" placeholder="请输入您的反馈" bindinput="onFeedbackInput" auto-height></textarea>
+    <button class="feedback-button" bindtap="onSendFeedback">发送反馈</button>
+  </view>
+</scroll-view>
